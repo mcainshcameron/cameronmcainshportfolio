@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cameron McAinsh | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">CM</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#stack" class="nav-link">Stack</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-greeting">Hi, I'm</span>
+                    <span class="hero-name">Cameron</span>
+                </h1>
+                <p class="hero-subtitle">I build things that probably shouldn't exist,<br>and a few that should.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">01.</span>
+                About Me
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">I'm a builder who enjoys exploring the space between "could we?" and "should we?"—often landing firmly on the side of "let's find out."</p>
+                    <p>My projects range from fully automated content pipelines that generate impractical kitchen products to platforms tracking amateur football performance with ML workflows. Some projects solve real problems, others exist purely to test ideas, and a few are deliberately useless.</p>
+                    <p>I work with automation tools (n8n, LLMs, APIs), web technologies (React, Flask, TypeScript), and whatever else helps turn concepts into running systems. Most projects start as experiments and occasionally become things people actually use.</p>
+                </div>
+                <div class="about-visual">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <span class="code-dot"></span>
+                            <span class="code-dot"></span>
+                            <span class="code-dot"></span>
+                        </div>
+                        <div class="code-content">
+                            <code>
+                                <span class="code-comment">// Current stack</span><br>
+                                <span class="code-keyword">const</span> <span class="code-variable">skills</span> = {<br>
+                                &nbsp;&nbsp;<span class="code-property">automation</span>: [<span class="code-string">'n8n'</span>, <span class="code-string">'LLMs'</span>],<br>
+                                &nbsp;&nbsp;<span class="code-property">frontend</span>: [<span class="code-string">'React'</span>, <span class="code-string">'TypeScript'</span>],<br>
+                                &nbsp;&nbsp;<span class="code-property">backend</span>: [<span class="code-string">'Flask'</span>, <span class="code-string">'Python'</span>],<br>
+                                &nbsp;&nbsp;<span class="code-property">tools</span>: [<span class="code-string">'Supabase'</span>, <span class="code-string">'Odoo'</span>],<br>
+                                &nbsp;&nbsp;<span class="code-property">philosophy</span>: <span class="code-string">'Ship it'</span><br>
+                                };
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">02.</span>
+                Featured Projects
+            </h2>
+
+            <div class="projects-grid">
+                <!-- Solo Pro League -->
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <img src="Solo Pro League.png" alt="Solo Pro League Logo" class="project-logo">
+                        <div class="project-overlay">
+                            <a href="https://soloproleague.com/" target="_blank" class="project-link-overlay" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Visit Project
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Full Stack</span>
+                            <span class="tag">ML</span>
+                            <span class="tag">Odoo</span>
+                        </div>
+                        <h3 class="project-title">Solo Pro League</h3>
+                        <div class="project-details">
+                            <div class="project-detail-section">
+                                <h4>What it is</h4>
+                                <p>The mother of all side projects. A platform for collecting and analyzing data from amateur football matches, focused on player performance and balanced teams.</p>
+                                <p>From the outside, it looks like a simple site for recording casual football games with friends. Under the hood, it does quite a bit more. I paste a WhatsApp message with the list of players for the next match, the system identifies participants, maps them to historical data, runs a heuristic algorithm to generate three balanced team configurations, and publishes the results to a dashboard so I can send them straight back to the group chat.</p>
+                                <p>The stack is a mix of Odoo, n8n, and Supabase. The dataset is of 200+ players over three years of matches and I use it to run simple ML workflows, although the predictive power is… limited.</p>
+                            </div>
+                            <div class="project-detail-section">
+                                <h4>Why I built it</h4>
+                                <p>It started as an attempt to get more friends to play football. We tracked attendance and gave bonus points to people who brought new players. This escalated quickly.</p>
+                                <p>The platform has since been used by more than 100 players to track performance, rankings, and peer voting. The logo is trademarked, and I work on the project with three other friends.</p>
+                            </div>
+                            <div class="project-detail-section">
+                                <h4>How it was made</h4>
+                                <p>Built primarily on Odoo, with Supabase and n8n used for automation and experiments; match/player history is used for team-balancing heuristics and small ML workflows.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Serra Vano -->
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <img src="Serra Vano.png" alt="Serra Vano Logo" class="project-logo">
+                        <div class="project-overlay">
+                            <a href="https://mcainshcameron.github.io/SerraVano/" target="_blank" class="project-link-overlay" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Visit Project
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Automation</span>
+                            <span class="tag">LLM</span>
+                            <span class="tag">n8n</span>
+                        </div>
+                        <h3 class="project-title">Serra Vano | Milano</h3>
+                        <div class="project-details">
+                            <div class="project-detail-section">
+                                <h4>What it is</h4>
+                                <p>Serra Vano is a conceptual website that presents intentionally impractical kitchen objects as if they were products from a high-end design brand. It looks like a design catalog; in reality, it is an automated system that generates product ideas, images, videos, and catalog entries for objects that should probably not exist.</p>
+                            </div>
+                            <div class="project-detail-section">
+                                <h4>Why I built it</h4>
+                                <p>I built this project to see whether creative output could be generated in a consistent, repeatable way by putting strong constraints on the process. Conceptually, it plays with the idea of design objects that actively resist use rather than optimize for it.</p>
+                                <p>More concretely, I wanted to see if a single "bad product" idea could be expanded automatically into images, videos, copy, pricing, and a published website. The answer turned out to be yes, but also no. Around 20 products were generated, but only a subset are actually "bad but funny." The project was mainly an exercise in understanding how hard it is to generate quality content for objects that don't exist—and arguably shouldn't.</p>
+                            </div>
+                            <div class="project-detail-section">
+                                <h4>How it was made</h4>
+                                <p>Orchestrated with n8n and multiple LLM steps: a user provides a simple object idea, an LLM identifies one clearly visible design flaw, and subsequent steps generate image prompts, video prompts, and catalog copy. Images/videos are generated via Fal, metadata lives in Google Sheets, and a small Python script turns the catalog into static HTML and publishes it to GitHub Pages.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Other Projects Grid -->
+                <article class="project-card compact">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <img src="weekend-english-high-resolution-logo-transparent.png" alt="Weekend English Logo" class="compact-logo">
+                        </div>
+                        <a href="https://weekendenglish.it/" target="_blank" class="project-external" rel="noopener noreferrer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                    <h3 class="project-title">Weekend English</h3>
+                    <p class="project-description">A static website for English interview preparation and coaching, designed to be fast, accessible, and easy to maintain. Built to test LLM-generated design quality.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">PWA</span>
+                        <span class="tag">Education</span>
+                    </div>
+                </article>
+
+                <article class="project-card compact">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <img src="xlsonics.png" alt="xlsonic Logo" class="compact-logo">
+                        </div>
+                        <a href="https://xlsonic.com/" target="_blank" class="project-external" rel="noopener noreferrer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                    <h3 class="project-title">xlsonic</h3>
+                    <p class="project-description">A conceptual project that explores turning data into sound instead of charts or tables. It is objectively useless, but deliberately so.</p>
+                    <div class="project-tags">
+                        <span class="tag">Concept</span>
+                        <span class="tag">Audio</span>
+                        <span class="tag">Data</span>
+                    </div>
+                </article>
+
+                <article class="project-card compact">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <img src="NoScrollzGiven.png" alt="No Scrolls Given Logo" class="compact-logo">
+                        </div>
+                        <a href="https://mcainshcameron.github.io/no-scrolls/" target="_blank" class="project-external" rel="noopener noreferrer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                    <h3 class="project-title">No Scrolls Given</h3>
+                    <p class="project-description">A daily briefing page that summarizes posts from selected LinkedIn profiles into a short, readable digest, with the explicit goal of avoiding LinkedIn itself.</p>
+                    <div class="project-tags">
+                        <span class="tag">n8n</span>
+                        <span class="tag">LLM</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </article>
+
+                <article class="project-card compact">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <img src="vestal.png" alt="Vestal Logo" class="compact-logo">
+                        </div>
+                        <a href="https://vestal-5098d2e3b384.herokuapp.com/" target="_blank" class="project-external" rel="noopener noreferrer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                    <h3 class="project-title">Vestal</h3>
+                    <p class="project-description">A web app for speed-reading practice. It displays text in timed word chunks to help train faster reading and visual focus (or at least to make you feel like you are reading faster).</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Vite</span>
+                    </div>
+                </article>
+
+                <article class="project-card compact">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <img src="PQL.png" alt="PQL Study App Logo" class="compact-logo">
+                        </div>
+                        <a href="https://pql-study-app-1026352969-9cc81ac3af00.herokuapp.com/theory" target="_blank" class="project-external" rel="noopener noreferrer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                    <h3 class="project-title">PQL Study App</h3>
+                    <p class="project-description">A small web app for learning Process Query Language (PQL), with a theory section, quizzes, and practical exercises. I have a habit of building small apps to "help me study," which mostly means I spend more time building the app than studying.</p>
+                    <div class="project-tags">
+                        <span class="tag">Flask</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Education</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="stack-section" id="stack">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">03.</span>
+                Tech Stack & Tools
+            </h2>
+            <div class="stack-grid">
+                <div class="stack-category">
+                    <h3>Automation & AI</h3>
+                    <ul class="stack-list">
+                        <li>n8n</li>
+                        <li>Make</li>
+                        <li>LLMs (GPT, Claude, Gemini, Mistral)</li>
+                        <li>OpenRouter</li>
+                        <li>Apify</li>
+                        <li>Fal.ai</li>
+                    </ul>
+                </div>
+                <div class="stack-category">
+                    <h3>Frontend</h3>
+                    <ul class="stack-list">
+                        <li>React</li>
+                        <li>TypeScript</li>
+                        <li>Vite</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+                <div class="stack-category">
+                    <h3>Backend</h3>
+                    <ul class="stack-list">
+                        <li>Python</li>
+                        <li>Flask</li>
+                        <li>Express</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+                <div class="stack-category">
+                    <h3>Data & Infrastructure</h3>
+                    <ul class="stack-list">
+                        <li>Supabase</li>
+                        <li>Odoo</li>
+                        <li>Hostinger KVM</li>
+                        <li>Heroku</li>
+                    </ul>
+                </div>
+                <div class="stack-category">
+                    <h3>Deployment</h3>
+                    <ul class="stack-list">
+                        <li>GitHub Pages</li>
+                        <li>Heroku</li>
+                        <li>Vercel</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+                <div class="stack-category">
+                    <h3>Development Tools</h3>
+                    <ul class="stack-list">
+                        <li>Claude Code</li>
+                        <li>Cursor</li>
+                        <li>Cline</li>
+                        <li>Git</li>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">
+                    <span class="section-number">04.</span>
+                    Get In Touch
+                </h2>
+                <p class="contact-text">Whether you want to discuss a project, share feedback on something I've built, or just say hi—I'm always up for a conversation. Find me on LinkedIn or check out my work on GitHub.</p>
+                <div class="contact-links">
+                    <a href="https://linkedin.com/in/cameronmcainsh" target="_blank" class="contact-btn" rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/mcainshcameron" target="_blank" class="contact-btn" rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed & Built by Cameron McAinsh</p>
+            <p class="footer-subtitle">CameronMcAinsh.com &copy; 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
