@@ -1,0 +1,20 @@
+# Cameron McAinsh - Portfolio
+Builder exploring the intersection of AI, automation, and web development through experimental and sometimes deliberately useless projects.
+
+## Featured Projects
+- **Solo Pro League**: Platform for tracking amateur football performance, balanced teams, and ML workflows (Stack: Odoo, n8n, Supabase).
+- **Serra Vano**: Conceptual automated content pipeline generating impractical kitchen objects, inspired by "The Uncomfortable" (Stack: n8n, LLMs, Fal.ai).
+- **Weekend English**: Static site for English interview preparation (Stack: HTML/CSS, PWA).
+- **xlsonic**: Conceptual project turning data into sound (Stack: Audio/Data Concept).
+- **No Scrolls Given**: LinkedIn daily digest summary to avoid scrolling (Stack: n8n, LLM).
+- **Vestal**: Speed-reading practice app (Stack: React, TypeScript, Vite).
+- **PQL Study App**: Education app for learning Process Query Language (Stack: Flask, Python).
+
+## Tech Stack
+- **Automation & AI**: n8n, Make, LLMs (GPT, Claude, Gemini, Mistral), Fal.ai, OpenRouter.
+- **Frontend**: React, TypeScript, Vite, Tailwind CSS.
+- **Backend**: Python, Flask, Express, Node.js.
+- **Data & Infra**: Supabase, Odoo, Heroku, Docker.
+
+## About
+Projects range from solving real problems to testing ideas and creating deliberate absurdity to understand AI capabilities on a different level.

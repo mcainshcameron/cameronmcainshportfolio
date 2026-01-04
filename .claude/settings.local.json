@@ -3,7 +3,16 @@
     "allow": [
       "Bash(dir:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(for file in *.png)",
+      "Bash(do \"/c/Program Files/ImageMagick-7.1.2-Q16-HDRI/magick\" \"$file\" -quality 85 \"$file%.png.webp\")",
+      "Bash(done)",
+      "Bash(ls:*)",
+      "Bash(test:*)"
     ]
   }
 }

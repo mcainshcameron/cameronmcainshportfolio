@@ -3,39 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cameron McAinsh | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Cameron McAinsh - Full stack developer specializing in AI automation, web development, and experimental projects. Explore my portfolio featuring Solo Pro League, Serra Vano, and more innovative applications built with React, Python, n8n, and LLMs.">
+    <meta name="keywords" content="Cameron McAinsh, Portfolio, Web Development, AI, Automation, n8n, LLM, React, Python, Full Stack, Machine Learning, TypeScript, Flask, Supabase, Odoo">
+    <meta name="author" content="Cameron McAinsh">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://cameronmcainsh.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cameronmcainsh.com/">
+    <meta property="og:title" content="Cameron McAinsh | Full Stack Developer & AI Automation Specialist">
+    <meta property="og:description" content="I build things that probably shouldn't exist, and a few that should. Exploring AI, automation, and web development through experimental projects.">
+    <meta property="og:site_name" content="Cameron McAinsh Portfolio">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://cameronmcainsh.com/">
+    <meta name="twitter:title" content="Cameron McAinsh | Full Stack Developer & AI Automation Specialist">
+    <meta name="twitter:description" content="I build things that probably shouldn't exist, and a few that should. Exploring AI, automation, and web development through experimental projects.">
+
+    <title>Cameron McAinsh | Full Stack Developer & AI Automation Specialist</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Preload first critical image - using PNG as WebP is larger for this one -->
+    <link rel="preload" as="image" href="assets/images/Solo Pro League.png" fetchpriority="high">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Cameron McAinsh",
+        "url": "https://cameronmcainsh.com",
+        "jobTitle": "Full Stack Developer",
+        "description": "Full stack developer specializing in AI automation, web development, and experimental projects",
+        "knowsAbout": ["Web Development", "AI Automation", "React", "Python", "n8n", "Machine Learning", "TypeScript", "Flask"],
+        "sameAs": [
+            "https://linkedin.com/in/cameronmcainsh",
+            "https://github.com/mcainshcameron"
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Cameron McAinsh Portfolio",
+        "url": "https://cameronmcainsh.com",
+        "description": "Portfolio showcasing full stack development projects with focus on AI automation and experimental applications",
+        "author": {
+            "@type": "Person",
+            "name": "Cameron McAinsh"
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">CM</a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#stack" class="nav-link">Stack</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <nav class="nav" id="nav" aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="#home" class="nav-logo" aria-label="Cameron McAinsh - Home">CM</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#stack" class="nav-link">Stack</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <!-- Animated Background -->
-    <div class="background-animation">
+    <div class="background-animation" aria-hidden="true">
         <div class="gradient-orb orb-1"></div>
         <div class="gradient-orb orb-2"></div>
         <div class="gradient-orb orb-3"></div>
     </div>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
@@ -51,9 +106,17 @@
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-container">
+                <blockquote id="zenquote-text" class="zen-quote">
+                    Loading inspiration...
+                </blockquote>
+                <p id="zenquote-author" class="zen-author">— Anonymous</p>
+                <p class="quote-refresh-info">A new quote every hour</p>
             </div>
         </div>
     </section>
@@ -68,7 +131,14 @@
             <div class="about-content">
                 <div class="about-text">
                     <p class="about-intro">I'm a builder who enjoys exploring the space between "could we?" and "should we?"—often landing firmly on the side of "let's find out."</p>
-                    <p>My projects range from fully automated content pipelines that generate impractical kitchen products to platforms tracking amateur football performance with ML workflows. Some projects solve real problems, others exist purely to test ideas, and a few are deliberately useless.</p>
+                    <p>My projects range from fully automated content pipelines that generate impractical kitchen products to platforms tracking amateur football performance with ML workflows.</p>
+                    
+                    <p>These projects are mainly useless, and that is why I do them. I have found that useless absurdity is a great way of understanding, on a "different" level, how AI can be used.</p>
+                    
+                    <blockquote class="quote">
+                        "Meaning is conveyed by the things we do that are not in our own short-term self-interest - by the costs that we incur and the risk we take" — Rory Sutherland
+                    </blockquote>
+
                     <p>I work with automation tools (n8n, LLMs, APIs), web technologies (React, Flask, TypeScript), and whatever else helps turn concepts into running systems. Most projects start as experiments and occasionally become things people actually use.</p>
                 </div>
                 <div class="about-visual">
@@ -108,7 +178,9 @@
                 <!-- Solo Pro League -->
                 <article class="project-card featured">
                     <div class="project-image">
-                        <img src="Solo Pro League.png" alt="Solo Pro League Logo" class="project-logo">
+                        <picture>
+                            <img src="assets/images/Solo Pro League.png" alt="Solo Pro League Logo" class="project-logo" width="500" height="300" fetchpriority="high" decoding="async">
+                        </picture>
                         <div class="project-overlay">
                             <a href="https://soloproleague.com/" target="_blank" class="project-link-overlay" rel="noopener noreferrer">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -150,7 +222,10 @@
                 <!-- Serra Vano -->
                 <article class="project-card featured">
                     <div class="project-image">
-                        <img src="Serra Vano.png" alt="Serra Vano Logo" class="project-logo">
+                        <picture>
+                            <source srcset="assets/images/Serra Vano.webp" type="image/webp">
+                            <img src="assets/images/Serra Vano.png" alt="Serra Vano Logo" class="project-logo" width="500" height="300" loading="lazy" decoding="async">
+                        </picture>
                         <div class="project-overlay">
                             <a href="https://mcainshcameron.github.io/SerraVano/" target="_blank" class="project-link-overlay" rel="noopener noreferrer">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -177,6 +252,7 @@
                             <div class="project-detail-section">
                                 <h4>Why I built it</h4>
                                 <p>I built this project to see whether creative output could be generated in a consistent, repeatable way by putting strong constraints on the process. Conceptually, it plays with the idea of design objects that actively resist use rather than optimize for it.</p>
+                                <p>The project was inspired by <a href="https://www.theuncomfortable.com/" target="_blank" rel="noopener noreferrer">The Uncomfortable</a> — The Uncomfortable is a collection of deliberately inconvenient everyday objects by Athens-based architect Katerina Kamprani.</p>
                                 <p>More concretely, I wanted to see if a single "bad product" idea could be expanded automatically into images, videos, copy, pricing, and a published website. The answer turned out to be yes, but also no. Around 20 products were generated, but only a subset are actually "bad but funny." The project was mainly an exercise in understanding how hard it is to generate quality content for objects that don't exist—and arguably shouldn't.</p>
                             </div>
                             <div class="project-detail-section">
@@ -188,21 +264,25 @@
                 </article>
 
                 <!-- Other Projects Grid -->
-                <article class="project-card compact">
+                <article class="project-card compact" itemscope itemtype="https://schema.org/SoftwareApplication">
                     <div class="project-card-header">
                         <div class="project-icon">
-                            <img src="weekend-english-high-resolution-logo-transparent.png" alt="Weekend English Logo" class="compact-logo">
+                            <picture>
+                                <img src="assets/images/weekend-english-high-resolution-logo-transparent.png" alt="Weekend English - English interview preparation and coaching platform" class="compact-logo" width="180" height="140" loading="lazy" decoding="async" itemprop="image">
+                            </picture>
                         </div>
-                        <a href="https://weekendenglish.it/" target="_blank" class="project-external" rel="noopener noreferrer">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <a href="https://weekendenglish.it/" target="_blank" class="project-external" rel="noopener noreferrer" aria-label="Visit Weekend English website">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                 <polyline points="15 3 21 3 21 9"></polyline>
                                 <line x1="10" y1="14" x2="21" y2="3"></line>
                             </svg>
                         </a>
                     </div>
-                    <h3 class="project-title">Weekend English</h3>
-                    <p class="project-description">A static website for English interview preparation and coaching, designed to be fast, accessible, and easy to maintain. Built to test LLM-generated design quality.</p>
+                    <h3 class="project-title" itemprop="name">Weekend English</h3>
+                    <p class="project-description" itemprop="description">A static website for English interview preparation and coaching, designed to be fast, accessible, and easy to maintain. Built to test LLM-generated design quality.</p>
+                    <meta itemprop="applicationCategory" content="Education">
+                    <meta itemprop="url" content="https://weekendenglish.it/">
                     <div class="project-tags">
                         <span class="tag">HTML/CSS</span>
                         <span class="tag">PWA</span>
@@ -213,7 +293,10 @@
                 <article class="project-card compact">
                     <div class="project-card-header">
                         <div class="project-icon">
-                            <img src="xlsonics.png" alt="xlsonic Logo" class="compact-logo">
+                            <picture>
+                                <source srcset="assets/images/xlsonics.webp" type="image/webp">
+                                <img src="assets/images/xlsonics.png" alt="xlsonic Logo" class="compact-logo" width="180" height="140" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <a href="https://xlsonic.com/" target="_blank" class="project-external" rel="noopener noreferrer">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -235,7 +318,10 @@
                 <article class="project-card compact">
                     <div class="project-card-header">
                         <div class="project-icon">
-                            <img src="NoScrollzGiven.png" alt="No Scrolls Given Logo" class="compact-logo">
+                            <picture>
+                                <source srcset="assets/images/NoScrollzGiven.webp" type="image/webp">
+                                <img src="assets/images/NoScrollzGiven.png" alt="No Scrolls Given Logo" class="compact-logo" width="180" height="140" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <a href="https://mcainshcameron.github.io/no-scrolls/" target="_blank" class="project-external" rel="noopener noreferrer">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -257,7 +343,10 @@
                 <article class="project-card compact">
                     <div class="project-card-header">
                         <div class="project-icon">
-                            <img src="vestal.png" alt="Vestal Logo" class="compact-logo">
+                            <picture>
+                                <source srcset="assets/images/vestal.webp" type="image/webp">
+                                <img src="assets/images/vestal.png" alt="Vestal Logo" class="compact-logo" width="180" height="140" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <a href="https://vestal-5098d2e3b384.herokuapp.com/" target="_blank" class="project-external" rel="noopener noreferrer">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -279,7 +368,10 @@
                 <article class="project-card compact">
                     <div class="project-card-header">
                         <div class="project-icon">
-                            <img src="PQL.png" alt="PQL Study App Logo" class="compact-logo">
+                            <picture>
+                                <source srcset="assets/images/PQL.webp" type="image/webp">
+                                <img src="assets/images/PQL.png" alt="PQL Study App Logo" class="compact-logo" width="180" height="140" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <a href="https://pql-study-app-1026352969-9cc81ac3af00.herokuapp.com/theory" target="_blank" class="project-external" rel="noopener noreferrer">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -371,23 +463,23 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section" id="contact">
+    <section class="contact-section" id="contact" itemscope itemtype="https://schema.org/ContactPage">
         <div class="container">
             <div class="contact-content">
                 <h2 class="section-title">
                     <span class="section-number">04.</span>
                     Get In Touch
                 </h2>
-                <p class="contact-text">Whether you want to discuss a project, share feedback on something I've built, or just say hi—I'm always up for a conversation. Find me on LinkedIn or check out my work on GitHub.</p>
+                <p class="contact-text" itemprop="description">Whether you want to discuss a project, share feedback on something I've built, or just say hi—I'm always up for a conversation. Find me on LinkedIn or check out my work on GitHub.</p>
                 <div class="contact-links">
-                    <a href="https://linkedin.com/in/cameronmcainsh" target="_blank" class="contact-btn" rel="noopener noreferrer">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <a href="https://linkedin.com/in/cameronmcainsh" target="_blank" class="contact-btn" rel="noopener noreferrer" itemprop="sameAs" aria-label="Connect with Cameron McAinsh on LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                         </svg>
                         LinkedIn
                     </a>
-                    <a href="https://github.com/mcainshcameron" target="_blank" class="contact-btn" rel="noopener noreferrer">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <a href="https://github.com/mcainshcameron" target="_blank" class="contact-btn" rel="noopener noreferrer" itemprop="sameAs" aria-label="View Cameron McAinsh's projects on GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
                         GitHub
@@ -396,15 +488,17 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>Designed & Built by Cameron McAinsh</p>
             <p class="footer-subtitle">CameronMcAinsh.com &copy; 2026</p>
+            <p class="footer-attribution">Quotes provided by <a href="https://zenquotes.io/" target="_blank" rel="noopener noreferrer">ZenQuotes API</a></p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
