@@ -309,32 +309,53 @@
                     </div>
                 </article>
 
-                <!-- Other Projects Grid -->
-                <article class="project-card compact" itemscope itemtype="https://schema.org/SoftwareApplication">
-                    <div class="project-card-header">
-                        <div class="project-icon">
-                            <picture>
-                                <img src="assets/images/weekend-english-high-resolution-logo-transparent.png" alt="Weekend English - English interview preparation and coaching platform" class="compact-logo" width="180" height="140" loading="lazy" decoding="async" itemprop="image">
-                            </picture>
+                <!-- Weekend English -->
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <picture>
+                            <source srcset="assets/images/weekend-english-high-resolution-logo-transparent.webp" type="image/webp">
+                            <img src="assets/images/weekend-english-high-resolution-logo-transparent.png" alt="Weekend English - English interview preparation platform" class="project-logo" width="500" height="300" loading="lazy" decoding="async">
+                        </picture>
+                        <div class="project-overlay">
+                            <a href="https://weekendenglish.it/" target="_blank" class="project-link-overlay" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Visit Project
+                            </a>
                         </div>
-                        <a href="https://weekendenglish.it/" target="_blank" class="project-external" rel="noopener noreferrer" aria-label="Visit Weekend English website">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                        </a>
                     </div>
-                    <h3 class="project-title" itemprop="name">Weekend English</h3>
-                    <p class="project-description" itemprop="description">A static website for English interview preparation and coaching, designed to be fast, accessible, and easy to maintain. Built to test LLM-generated design quality.</p>
-                    <meta itemprop="applicationCategory" content="Education">
-                    <meta itemprop="url" content="https://weekendenglish.it/">
-                    <div class="project-tags">
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">PWA</span>
-                        <span class="tag">Education</span>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">PWA</span>
+                            <span class="tag">Performance</span>
+                        </div>
+                        <h3 class="project-title">Weekend English</h3>
+                        <div class="project-details">
+                            <div class="project-detail-section">
+                                <h4>What it is</h4>
+                                <p>A high-performance, responsive website offering English interview preparation services. Built as a Progressive Web App with modern web technologies, optimized for accessibility, performance, and SEO.</p>
+                                <p>Features include fully responsive mobile-first design, WCAG-compliant accessibility, offline capabilities with service worker, bilingual content support, dynamic interactions with Intersection Observer API, and privacy-focused design with no tracking or cookies.</p>
+                                <p>The site implements critical CSS inlining, lazy loading for images, progressive font loading, and efficient scroll handling with debouncing for optimal performance across all devices.</p>
+                            </div>
+                            <div class="project-detail-section">
+                                <h4>Why I built it</h4>
+                                <p>This project was an experiment to test LLM-generated design quality and to build a production-ready static site with zero dependencies and maximum performance. The goal was to see if a purely hand-coded approach using modern web standards could outperform framework-based solutions.</p>
+                                <p>It also served as a learning exercise in progressive enhancement, accessibility best practices, and performance optimization techniques—all while creating a functional service website that delivers real value.</p>
+                            </div>
+                            <div class="project-detail-section">
+                                <h4>How it was made</h4>
+                                <p>Built with semantic HTML5, modular CSS3 architecture (Grid, Flexbox, Custom Properties), and vanilla JavaScript. The site uses progressive enhancement with feature detection, Intersection Observer for scroll animations, Service Worker for offline functionality, and Font Awesome icons with Inter typography.</p>
+                                <p>Zero build process required—everything is hand-coded with careful attention to web standards, performance, and accessibility. Includes PWA manifest for app-like experience and installation capability.</p>
+                            </div>
+                        </div>
                     </div>
                 </article>
+
+                <!-- Other Projects Grid -->
 
                 <article class="project-card compact">
                     <div class="project-card-header">
