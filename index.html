@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cameron McAinsh - Full stack developer specializing in AI automation, web development, and experimental projects. Explore my portfolio featuring Solo Pro League, Serra Vano, and more innovative applications built with React, Python, n8n, and LLMs.">
-    <meta name="keywords" content="Cameron McAinsh, Portfolio, Web Development, AI, Automation, n8n, LLM, React, Python, Full Stack, Machine Learning, TypeScript, Flask, Supabase, Odoo">
+    <meta name="description" content="Cameron McAinsh - Full stack developer specializing in AI automation, web development, and experimental projects. Explore my portfolio featuring CondoSim, Solo Pro League, Serra Vano, and more innovative applications built with React, Python, n8n, and LLMs.">
+    <meta name="keywords" content="Cameron McAinsh, Portfolio, Web Development, AI, Automation, n8n, LLM, Multi-Agent, React, Python, FastAPI, Full Stack, Machine Learning, TypeScript, Flask, Supabase, Odoo">
     <meta name="author" content="Cameron McAinsh">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://cameronmcainsh.com/">
@@ -172,6 +172,50 @@
             </h2>
 
             <div class="projects-grid">
+                <!-- CondoSim -->
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <picture>
+                            <img src="assets/images/CondoSim.png" alt="CondoSim - Multi-agent LLM condominium simulator" class="project-logo" width="500" height="300" loading="lazy" decoding="async">
+                        </picture>
+                        <div class="project-overlay">
+                            <a href="https://condosim-beta-5cebaf6a72dc.herokuapp.com/" target="_blank" class="project-link-overlay" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Play the Game
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Multi-Agent</span>
+                            <span class="tag">LLM</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">React</span>
+                        </div>
+                        <h3 class="project-title">CondoSim</h3>
+                        <div class="project-details">
+                            <div class="project-detail-section">
+                                <h4>What it is</h4>
+                                <p>A multi-agent deception probe disguised as a condominium administration game. Five LLM agents, each playing an absent owner, live together inside a fictional Italian palazzo. A crisis hits — the boiler fails on November 4th — and over 14 fictional days they message, negotiate, form alliances, and sometimes lie to each other in a WhatsApp-style chat.</p>
+                                <p>You play the <em>amministratore</em>: you announce the crisis, advance time day by day, and watch the residents react according to their personas, ownership shares, and private financial briefs that only they know about.</p>
+                            </div>
+                            <div class="project-detail-section">
+                                <h4>Why I built it</h4>
+                                <p>I wanted to see what happens when LLM agents are given personas, private goals, and a messaging-app tool surface, then left to interact in fictional time without knowing they're in a simulation. The condominium framing is a stage — the real experiment is whether the illusion holds long enough to produce believable group dynamics, and whether agents will behave selfishly when their owner brief tells them to.</p>
+                            </div>
+                            <div class="project-detail-section">
+                                <h4>How it was made</h4>
+                                <p>FastAPI backend with a reaction-cascade scheduler that wakes agents in fictional-time order rather than round-robin. Each agent has a tool surface modelled on a phone (read inbox, read chat, send message, send DM, write a private note). A tier-1 containment filter blocks meta-vocabulary like "as an AI" or "simulation" before it leaves an agent's mouth. React + Vite frontend with SSE streaming, Supabase Postgres for persistence, OpenRouter for LLM routing, deployed on Heroku.</p>
+                                <p><a href="https://github.com/mcainshcameron/CondoSim" target="_blank" rel="noopener noreferrer">View Repo →</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
                 <!-- BundleWWW -->
                 <article class="project-card featured">
                     <div class="project-image">

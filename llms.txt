@@ -2,6 +2,7 @@
 Builder exploring the intersection of AI, automation, and web development through experimental and sometimes deliberately useless projects.
 
 ## Featured Projects
+- **CondoSim**: Multi-agent LLM simulator where five AI residents of a fictional Italian condominium message, negotiate, and sometimes lie over a 14-day crisis (Stack: FastAPI, React, OpenRouter, Supabase).
 - **Solo Pro League**: Platform for tracking amateur football performance, balanced teams, and ML workflows (Stack: Odoo, n8n, Supabase).
 - **Serra Vano**: Conceptual automated content pipeline generating impractical kitchen objects, inspired by "The Uncomfortable" (Stack: n8n, LLMs, Fal.ai).
 - **Weekend English**: Static site for English interview preparation (Stack: HTML/CSS, PWA).
