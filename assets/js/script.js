@@ -122,25 +122,10 @@ window.addEventListener('mousemove', (e) => {
     });
 });
 
-// Add typing effect to hero title (optional enhancement)
-const heroName = document.querySelector('.hero-name');
-if (heroName) {
-    const text = heroName.textContent;
-    heroName.textContent = '';
-    heroName.style.opacity = '1';
-
-    let index = 0;
-    function typeWriter() {
-        if (index < text.length) {
-            heroName.textContent += text.charAt(index);
-            index++;
-            setTimeout(typeWriter, 80);
-        }
-    }
-
-    // Start typing after page loads
-    setTimeout(typeWriter, 800);
-}
+// Note: previous version had a typewriter that emptied the H1 and refilled
+// it letter-by-letter. Removed because it hid "Cameron McAinsh" from the
+// initial DOM, which is what crawlers index. The gradient + fadeInScale
+// animation already gives the hero a visual entrance.
 
 
 // Cursor trail effect (subtle)
