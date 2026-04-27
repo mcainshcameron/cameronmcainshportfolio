@@ -6,7 +6,7 @@ Builder exploring the intersection of AI, automation, and web development throug
 - **Solo Pro League**: Platform for tracking amateur football performance, balanced teams, and ML workflows (Stack: Odoo, n8n, Supabase).
 - **Serra Vano**: Conceptual automated content pipeline generating impractical kitchen objects, inspired by "The Uncomfortable" (Stack: n8n, LLMs, Fal.ai).
 - **Weekend English**: Static site for English interview preparation (Stack: HTML/CSS, PWA).
-- **xlsonic**: Conceptual project turning data into sound (Stack: Audio/Data Concept).
+- **xlsonic**: Satirical enterprise-SaaS landing page that "turns data into sound" — corporate parody making a serious point about AI direction (everyone does language→data, almost nobody does data→language) (Stack: Web Audio, Three.js, particles.js).
 - **No Scrolls Given**: LinkedIn daily digest summary to avoid scrolling (Stack: n8n, LLM).
 - **Vestal**: Speed-reading practice app (Stack: React, TypeScript, Vite).
 - **PQL Study App**: Education app for learning Process Query Language (Stack: Flask, Python).
