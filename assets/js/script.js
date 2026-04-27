@@ -1,8 +1,9 @@
-// Navigation scroll effect
+// Navigation scroll effect + scroll progress indicator (single rAF-throttled handler)
 const nav = document.getElementById('nav');
-let lastScroll = 0;
+const scrollProgress = document.getElementById('scrollProgress');
+let scrollTicking = false;
 
-window.addEventListener('scroll', () => {
+function onScroll() {
     const currentScroll = window.pageYOffset;
 
     if (currentScroll > 50) {
@@ -11,8 +12,23 @@ window.addEventListener('scroll', () => {
         nav.classList.remove('scrolled');
     }
 
-    lastScroll = currentScroll;
-});
+    if (scrollProgress) {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (currentScroll / docHeight) * 100 : 0;
+        scrollProgress.style.width = pct + '%';
+    }
+
+    scrollTicking = false;
+}
+
+window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+        requestAnimationFrame(onScroll);
+        scrollTicking = true;
+    }
+}, { passive: true });
+
+onScroll();
 
 // Mobile menu toggle
 const navToggle = document.getElementById('navToggle');
@@ -177,82 +193,27 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     });
 }
 
-// ===== ZenQuotes API Integration =====
-let quotesCache = [];
-const CACHE_DURATION = 3600000; // 1 hour in milliseconds
-const API_URL = "https://zenquotes.io/api/quotes";
+// Click-to-copy email button
+const emailBtn = document.getElementById('emailCopyBtn');
+if (emailBtn) {
+    const email = emailBtn.dataset.email;
+    const label = emailBtn.querySelector('.contact-btn-label');
+    const feedback = emailBtn.querySelector('.contact-btn-feedback');
+    const originalLabel = label ? label.textContent : 'Email';
 
-// Fetch quotes from ZenQuotes API
-async function fetchQuotes() {
-    try {
-        const response = await fetch(API_URL);
-        if (!response.ok) {
-            throw new Error('Failed to fetch quotes');
+    emailBtn.addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText(email);
+            emailBtn.classList.add('copied');
+            if (label) label.textContent = email;
+            if (feedback) feedback.textContent = 'Copied to clipboard';
+            setTimeout(() => {
+                emailBtn.classList.remove('copied');
+                if (label) label.textContent = originalLabel;
+                if (feedback) feedback.textContent = '';
+            }, 2200);
+        } catch (err) {
+            window.location.href = 'mailto:' + email;
         }
-        const data = await response.json();
-
-        // Store quotes in cache with timestamp
-        quotesCache = data;
-        localStorage.setItem('zenquotes_cache', JSON.stringify(data));
-        localStorage.setItem('zenquotes_timestamp', Date.now().toString());
-
-        return data;
-    } catch (error) {
-        console.error('Error fetching quotes:', error);
-        // Return a fallback quote if API fails
-        return [{
-            q: "The only way to do great work is to love what you do.",
-            a: "Steve Jobs"
-        }];
-    }
+    });
 }
-
-// Load quotes from cache or fetch new ones
-async function loadQuotes() {
-    const cachedQuotes = localStorage.getItem('zenquotes_cache');
-    const cachedTimestamp = localStorage.getItem('zenquotes_timestamp');
-    const now = Date.now();
-
-    // Check if cache exists and is still valid
-    if (cachedQuotes && cachedTimestamp && (now - parseInt(cachedTimestamp)) < CACHE_DURATION) {
-        quotesCache = JSON.parse(cachedQuotes);
-    } else {
-        // Cache expired or doesn't exist, fetch new quotes
-        quotesCache = await fetchQuotes();
-    }
-
-    // Display a random quote
-    displayRandomQuote();
-}
-
-// Display a random quote from the cache
-function displayRandomQuote() {
-    if (quotesCache.length === 0) return;
-
-    // Get a random quote
-    const randomIndex = Math.floor(Math.random() * quotesCache.length);
-    const quote = quotesCache[randomIndex];
-
-    const quoteText = document.getElementById('zenquote-text');
-    const quoteAuthor = document.getElementById('zenquote-author');
-
-    if (quoteText && quoteAuthor) {
-        // Add fade-out animation
-        quoteText.style.opacity = '0';
-        quoteAuthor.style.opacity = '0';
-
-        setTimeout(() => {
-            quoteText.textContent = `"${quote.q}"`;
-            quoteAuthor.textContent = `— ${quote.a}`;
-
-            // Fade back in
-            quoteText.style.opacity = '1';
-            quoteAuthor.style.opacity = '1';
-        }, 300);
-    }
-}
-
-// Initialize quotes on page load
-document.addEventListener('DOMContentLoaded', () => {
-    loadQuotes();
-});
